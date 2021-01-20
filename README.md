@@ -9,8 +9,6 @@ This is very simple, CentralBackup2 is meant to be installed on one central host
 
 ![ ](https://github.com/ycambourieu/CentralBackup2/blob/main/screenshots/schema.png)
 
-//TODO : Schema
-
 Backups and logs are stored locally on the central host. Options to add other type of destination like SMB or cloud based storage solution are in study.
 
 ## Folder Structure
