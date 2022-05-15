@@ -34,7 +34,7 @@ function AfficherBanner(){
 }
 
 function AfficherTitre(){
-	echo -e "\033[1m## $@ ##\033[0m"
+	echo -e "\033[1m## $* ##\033[0m"
 }
 
 function AfficherSautLigne(){
@@ -43,67 +43,67 @@ function AfficherSautLigne(){
 
 function AfficherCode(){
 	AfficherSautLigne
-	echo -e "	\033[35m$@\033[0m"
+	echo -e "	\033[35m$*\033[0m"
 	AfficherSautLigne
 }
 
 function AfficherOk(){
-	echo -e "	\033[32m►\033[0m $@"
+	echo -e "	\033[32m►\033[0m $*"
 }
 
 function AfficherWarn(){
-	echo -e "	\033[33m►\033[0m $@"
+	echo -e "	\033[33m►\033[0m $*"
 }
 
 function AfficherCrit(){
-	echo -e "	\033[31m►\033[0m $@"
+	echo -e "	\033[31m►\033[0m $*"
 }
 
 function AfficherWaiting(){
-	echo -e "		• $@ : Waiting to start..."
+	echo -e "		• $* : Waiting to start..."
 }
 
 function AfficherInProgress(){
-	echo -e "		\033[33m• $@ : In Progress...\033[0m"
+	echo -e "		\033[33m• $* : In Progress...\033[0m"
 }
 
 function AfficherInProgressOverwrite(){
-	echo -e "\e[1A\e[K		\033[33m• $@ : In Progress...\033[0m"
+	echo -e "\e[1A\e[K		\033[33m• $* : In Progress...\033[0m"
 }
 
 function AfficherDoneOverwrite(){
-	echo -e "\e[1A\e[K		\033[32m• $@ : Done.\033[0m"
+	echo -e "\e[1A\e[K		\033[32m• $* : Done.\033[0m"
 }
 
 function AfficherDone(){
-	echo -e "		\033[32m• $@ : Done.\033[0m"
+	echo -e "		\033[32m• $* : Done.\033[0m"
 }
 
 function AfficherErrorOverwrite(){
-	echo -e "\e[1A\e[K		\033[31m• $@ : Erreur, des droits root sont peut être requis\033[0m"
+	echo -e "\e[1A\e[K		\033[31m• $* : Erreur, des droits root sont peut être requis\033[0m"
 }
 
 function ColorTextComment(){
 	ESC=$(printf '\033')
-	echo "$@" | sed "s,.*,\t${ESC}[36m&${ESC}[0m,"
+	echo "$*" | sed "s,.*,\t${ESC}[36m&${ESC}[0m,"
 
 }
 
 function ColorTextHost(){
 	ESC=$(printf '\033')
-	echo -e "\t\t$@" | sed "s,${CLIENT},${ESC}[33m&${ESC}[0m,"
+	echo -e "\t\t$*" | sed "s,${CLIENT},${ESC}[33m&${ESC}[0m,"
 
 }
 
 function ColorTextEnabled(){
 	ESC=$(printf '\033')
-	echo -e "\t\t$@" | sed "s,1,${ESC}[32m&${ESC}[0m,"
+	echo -e "\t\t$*" | sed "s,1,${ESC}[32m&${ESC}[0m,"
 
 }
 
 function ColorTextDisabled(){
 	ESC=$(printf '\033')
-	echo -e "\t\t$@" | sed "s,0,${ESC}[31m&${ESC}[0m,"
+	echo -e "\t\t$*" | sed "s,0,${ESC}[31m&${ESC}[0m,"
 
 }
 
