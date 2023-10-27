@@ -21,7 +21,7 @@ The program consist of one MODEL folder which is the template for host creation 
 - `maj_centralbackup.sh` : script to update all hosts configuration to match the code of the MODEL. Very usefull if you need to manually add some tweaks into `backup.sh` script for all hosts.
 - `centralbackup.conf` : main configuration file of CentralBackup2
 
-## What it does ?
+## What does it do ?
 
 1. Create all needed directory structure for host and backu storage
 2. Add all backup information into log files
